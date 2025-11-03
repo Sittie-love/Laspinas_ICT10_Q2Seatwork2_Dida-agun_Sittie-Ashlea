@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>GWA Calculator</title>
+
+    <style>
+        body {
+            background-color: #f7ecff;
+            font-family: "Poppins", sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .btn-custom {
+            background-color: #b06ad6;
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #9447c3;
+        }
+        #results div {
+            margin-top: 10px;
+        }
+
+        .text-primary {
+            color: #5D3FD3 !important; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center text-primary mb-4">Student Grade Calculator</h2>
+        <div class="mb-3">
+            <label>First Name:</label>
+            <input type="text" id="firstName" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label>Last Name:</label>
+            <input type="text" id="lastName" class="form-control">
+        </div>
+
+        <div class="mb-3"><label>Science:</label><input type="number" id="science" class="form-control"></div>
+        <div class="mb-3"><label>Math:</label><input type="number" id="math" class="form-control"></div>
+        <div class="mb-3"><label>English:</label><input type="number" id="english" class="form-control"></div>
+        <div class="mb-3"><label>Filipino:</label><input type="number" id="filipino" class="form-control"></div>
+        <div class="mb-3"><label>ICT:</label><input type="number" id="ict" class="form-control"></div>
+        <div class="mb-3"><label>PE:</label><input type="number" id="pe" class="form-control"></div>
+
+        <div class="d-grid gap-2">
+            <button class="btn btn-custom text-white" py-click="calculate_gwa">Compute GWA</button>
+        </div>
+
+        <div id="results" class="mt-4 p-3 rounded bg-light">
+            <div id="result_name"></div>
+            <div id="result_grades"></div>
+            <div id="result_gwa" class="fw-bold"></div>
+            <div id="result_remark"></div>
+        </div>
+    </div>
+
+    <script type="py" src="main.py"></script>
+</body>
+</html>
