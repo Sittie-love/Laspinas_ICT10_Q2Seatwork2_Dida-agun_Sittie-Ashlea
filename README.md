@@ -1,0 +1,1 @@
+# Laspinas_ICT10_Q2Seatwork2_Dida-agun_Sittie-Ashlea
